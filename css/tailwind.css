@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: roboto;
+  src: url(../fonts/Roboto-Regular.eot);
+  src: url(../fonts/Roboto-Regular.ttf);
+  src: url(../fonts/Roboto-Regular.woff);
+  src: url(../fonts/Roboto-Regular.woff2);
+}
+@font-face {
+  font-family: med;
+  src: url(../fonts/Roboto-Medium.eot);
+  src: url(../fonts/Roboto-Medium.ttf);
+  src: url(../fonts/Roboto-Medium.woff);
+  src: url(../fonts/Roboto-Medium.woff2);
+}
+@layer base {
+  p,
+  div,
+  h1,
+  a {
+    @apply md:text-[16px] text-[12px] 
+         font-roboto capitalize text-[#1d2130];
+  }
+}
+@layer components {
+  .container {
+    @apply w-[90%] h-[inherit]  flex  justify-between;
+  }
+  .wwd {
+    @apply bg-white w-fit py-[16px] px-[32px] capitalize font-semibold rounded-[8px] leading-[30px];
+  }
+  .lrn {
+    @apply bg-primary-green md:py-[16px] md:px-[32px] capitalize border  font-semibold rounded-[8px] leading-[30px];
+  }
+
+  .bar {
+    @apply px-[16px] gap-[30px] inline-flex justify-center items-center;
+  }
+  .donate {
+    @apply bg-primary-blue rounded-md text-[19px] font-medium tracking-widest capitalize text-white w-fit font-roboto py-[12px] px-[32px] leading-[40px];
+  }
+  .img-title {
+    @apply mt-[128px] font-roboto  w-[640px]  font-[700]  text-[64px] text-white;
+  }
+  .video {
+    @apply w-[480px] h-[578px];
+  }
+  .line {
+    @apply w-[73px] h-[2px] bg-primary-blue mt-[70px];
+  }
+  .support {
+    @apply mt-[60px];
+  }
+  .four {
+    @apply grid grid-cols-2 w-full gap-3 sm:gap-[30px] sm:flex sm:flex-col sm:ml-4 sm:place-items-stretch;
+  }
+  .sec {
+    @apply w-full  flex justify-center sm:gap-[20px];
+  }
+  .detail {
+    @apply gap-1 min-[700px]:items-center justify-evenly;
+  }
+
+  .botn {
+    @apply bg-white text-[#1d2130] md:py-[14px] md:px-[30px]  box-border px-[10px] py-[2px] font-semibold sm:rounded-[8px] capitalize rounded-[5px] leading-[25px] z-20   sm:leading-[30px] absolute -bottom-[35%]  sm:static;
+  }
+  .glass-card {
+    background: white;
+    background: linear-gradient(
+      to right bottom,
+      rgba(1, 1, 1, 0.1),
+      rgba(1, 1, 1, 0.2)
+    );
+    backdrop-filter: blur(1rem);
+  }
+  .square {
+    @apply w-[8px] h-[8px] sm:w-[16px] sm:h-[16px] rounded-sm;
+  }
+  .caption {
+    @apply text-[8px] text-white sm:text-[16px];
+  }
+  .footer {
+    @apply w-full bg-[#0B0706] flex justify-center;
+  }
+  .link {
+    @apply text-[#fff] sm:text-[14px] no-underline;
+  }
+  .centery {
+    @apply sm:my-[95px]  my-[20px] flex justify-center;
+  }
+  .vision {
+    @apply flex justify-center absolute top-[400px]  gap-[95px];
+  }
+  .card {
+    @apply my-5 flex  flex-col items-center;
+  }
+  .mobile {
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+}
